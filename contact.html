@@ -221,14 +221,33 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="section-container">
-      <div class="logo">
-     <img src="images/logo.webp" alt="Tibetan Bowl Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';" />
-        <h1 class="text-xl md:text-2xl">Tibetan Bowl</h1>
-      </div>
-      <nav><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-    </div>
-  </header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.webp" alt="Tibetan Bowl Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';">
+                <span class="logo-text">Tibetan Bowl</span>
+            </div>
+            <nav>
+                <ul class="nav-menu hidden md:flex">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+  
+            <button class="md:hidden text-white focus:outline-none" aria-label="Toggle mobile menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+             <div class="md:hidden bg-black py-2 hidden" id="mobile-menu">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Home</a>
+                <a href="menu.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Menu</a>
+                <a href="contact.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
 
   <main>
     <section class="contact-section">
