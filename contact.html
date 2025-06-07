@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Stores - Tibetan Bowl</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!-- Google Fonts: Inter for general text, Mouldy Cheese for titles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Mouldy+Cheese&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Color Variables based on your provided index.html and requests */
+    :root {
+      --color-primary-maroon: #6a0d0d;
+      --color-dark-bg: #000;
+      --color-light-accent: #ffcc00; /* "nice yellow" */
+      --color-text-light: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8; /* Light background for the overall page body */
+      color: #333; /* Dark text for readability on light backgrounds */
+    }
+
+    /* Header styles matching index.html */
+    header.site-header {
+      background-color: var(--color-dark-bg);
+      padding: 10px 20px;
+      color: var(--color-text-light);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    header.site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header.site-header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header.site-header .logo img {
+      height: 40px;
+      width: auto;
+    }
+    header.site-header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+    header.site-header nav ul.nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    header.site-header nav ul.nav-menu li a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      transition: background 0.3s ease, color 0.3s ease;
+      border-radius: 4px;
+    }
+    header.site-header nav ul.nav-menu li a:hover,
+    header.site-header nav ul.nav-menu li a:focus {
+      background-color: var(--color-primary-maroon);
+      color: var(--color-light-accent);
+    }
+
+    /* General section styling */
+    .section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-family: 'Mouldy Cheese', cursive;
+      font-size: 2.8rem;
+      color: var(--color-primary-maroon);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Separator line style */
+    .separator {
+        border-top: 1px solid #ccc;
+        margin: 4rem auto;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    /* Contact Info styles */
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto 4rem auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .contact-info strong {
+      color: var(--color-primary-maroon);
+    }
+    .contact-info a {
+      color: var(--color-primary-maroon);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: var(--color-light-accent);
+    }
+
+    /* Store Locations Grid styles */
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .store-item {
+      background: var(--color-text-light);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .store-item:hover {
+      transform: translateY(-5px);
+    }
+    .store-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block; /* Make the whole item clickable */
+    }
+    .store-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .store-item p {
+      font-size: 1.1rem;
+      color: var(--color-primary-maroon);
+      font-weight: 600;
+    }
+
+    /* Franchise Info styles */
+    .franchise-info {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: var(--color-primary-maroon); /* Maroon background */
+      color: var(--color-text-light); /* White text */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+    .franchise-info p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .franchise-info strong {
+      color: var(--color-light-accent);
+    }
+    .franchise-info a {
+      color: var(--color-light-accent);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .franchise-info a:hover {
+      color: var(--color-text-light);
+    }
+
+    /* Footer styles from your index.html */
+    footer.site-footer {
+      background-color: var(--color-dark-bg);
+      color: var(--color-text-light);
+      padding: 40px 20px 20px;
+    }
+    footer.site-footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    footer.site-footer .footer-section {
+      flex: 1 1 250px;
+    }
+    footer.site-footer .footer-logo-text {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    footer.site-footer p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    footer.site-footer h4 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #555;
+    }
+    footer.site-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    footer.site-footer ul li a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 4px 0;
+      display: block;
+      transition: color 0.3s ease;
+    }
+    footer.site-footer ul li a:hover {
+      color: var(--color-light-accent);
+    }
+    footer.site-footer .social-links a {
+      color: var(--color-text-light);
+      margin-right: 12px;
+      transition: color 0.3s ease;
+    }
+    footer.site-footer .social-links a:hover {
+      color: var(--color-light-accent);
+    }
+    footer.site-footer .bottom-bar {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      border-top: 1px solid #444;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Tibetan Bowl Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';" />
+        <h1>Tibetan Bowl</h1>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          
+          <li><a href="contact-stores.html">Contact</a></li> <!-- Updated link -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Us Section -->
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Reach us by the methods below:</p>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +91-99999-99999</p>
+        <p><strong>Email:</strong> info@tibetanbowl.in</p>
+        <p><strong>Address:</strong> 123 Ramen Street, Spicy City, Chennai, Tamil Nadu, India</p>
+        <p>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Separator Line 1 -->
+    <div class="separator"></div>
+
+    <!-- Store Locations Section -->
+    <section class="section">
+      <h2>Our Store Locations</h2>
+      <div class="store-grid">
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=Chennai+Central+Branch" target="_blank">
+            <img src="images/central.png" alt="Chennai Central" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Chennai+Central';"> 
+            <p>Chennai Central Branch</p>
+          </a>
+        </div>
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=T.Nagar+Outlet" target="_blank">
+            <img src="images/T-nagar.png" alt="T. Nagar Outlet" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=T.+Nagar';">
+            <p>T. Nagar Outlet</p>
+          </a>
+        </div>
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=Velachery+Shop" target="_blank">
+            <img src="images/Velachery.png" alt="Velachery Shop" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Velachery';">
+            <p>Velachery Shop</p>
+          </a>
+        </div>
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=Mogapair+Outlet" target="_blank">
+            <img src="images/Mogapair.png" alt="Mogapair" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Mogapair';">
+            <p>Mogapair Outlet</p>
+          </a>
+        </div>
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=OMR+Branch" target="_blank">
+            <img src="images/OMRbranch.png" alt="OMR Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=OMR+Branch';">
+            <p>OMR Branch</p>
+          </a>
+        </div>
+        <!-- New Store Item -->
+        <div class="store-item">
+          <a href="https://maps.google.com/?q=Anna+Nagar+Branch" target="_blank">
+            <img src="hosur.png" alt="Anna Nagar Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Anna+Nagar';">
+            <p>Hosur Outlet</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator Line 2 -->
+    <div class="separator"></div>
+
+    <!-- Franchise Request Section -->
+    <section class="section">
+      <h2>Franchise Request</h2>
+      <p>Want to open your own Tibetan Bowl store? Reach out to us for partnership and setup support.</p>
+      <div class="franchise-info">
+        <p><strong>Email:</strong> <a href="mailto:franchise@tibetanbowl.com">franchise@tibetanbowl.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919999999999" target="_blank">Click here to chat</a></p>
+        <p><strong>Support Includes:</strong> Brand licensing, training, setup guidance, and marketing assistance.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Logo and tagline -->
+      <div class="footer-section">
+        <div class="flex items-center gap-2">
+          <img src="images/logo.webp" alt="Tibetan Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';" />
+          <h3 class="footer-logo-text">Tibetan Bowl</h3>
+        </div>
+        <p>Making exotic dishes affordable for everyone.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact-stores.html">Contact Us</a></li> <!-- Updated link -->
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p class="mb-1"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
+        <p class="mb-1"><i class="fa fa-phone"></i> &nbsp; +91 99999 99999</p>
+        <p class="mb-4"><i class="fa fa-envelope"></i> &nbsp; hello@tibetanbowl.com</p>
+
+        <div class="social-links mt-4">
+          <a href="https://facebook.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="Facebook">
+              <i class="fa fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="Instagram">
+              <i class="fa fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="YouTube">
+              <i class="fa fa-youtube fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="bottom-bar">
+      © 2025 Tibetan Bowl. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
