@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Tibetan Bowl</title>
-    <!-- Tailwind CSS CDN -->
+ 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Inter (general) and Mouldy Cheese (distressed titles) -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Mouldy+Cheese&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social icons in footer (from index.html) -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <style>
-        /* Color variables based on user's index.html, menu.html, and previous requests */
+     
         :root {
-            --color-primary-maroon: #6a0d0d; /* Main maroon from index.html */
-            --color-dark-bg: #000000;   /* Pure black for main page background, header, footer */
-            --color-text-light: #fff; /* White text for header/footer and elements on dark backgrounds */
+            --color-primary-maroon: #6a0d0d;
+            --color-dark-bg: #000000;   
+            --color-text-light: #fff;
             
-            /* Specific colors for the pull-out menu to imitate a grey bill */
-            --color-bill-bg: #E0E0E0; /* Light grey for bill background */
-            --color-bill-text-dark: #333333; /* Dark grey/black for text on bill */
-            --color-bill-text-maroon: #6a0d0d; /* Maroon for accents on bill */
-            --color-bill-border-dark: #666666; /* Darker grey for borders on bill */
-            --color-bill-border-light: #AAAAAA; /* Lighter grey for dotted lines on bill */
+           
+            --color-bill-bg: #E0E0E0; 
+            --color-bill-text-dark: #333333; 
+            --color-bill-text-maroon: #6a0d0d; 
+            --color-bill-border-dark: #666666; 
+            --color-bill-border-light: #AAAAAA;
         }
 
         body {
             margin: 0;
-            /* Font from user's menu.html snippet */
+            
             font-family: 'Segoe UI', 'Inter', sans-serif;
-            background-color: var(--color-dark-bg); /* Enforce black background for the body */
-            color: var(--color-text-light); /* Default text to white on black background */
+            background-color: var(--color-dark-bg); 
+            color: var(--color-text-light);
         }
-
-        /* Header styles matching index.html */
         header.site-header {
             background-color: var(--color-dark-bg);
             padding: 10px 20px;
@@ -81,113 +79,97 @@
         header.site-header nav ul.nav-menu li a:hover,
         header.site-header nav ul.nav-menu li a:focus {
             background-color: var(--color-primary-maroon);
-            color: var(--color-text-light); /* White on maroon hover */
+            color: var(--color-text-light); 
         }
-
-        /* Hero section specific styling for "MENU" */
         .hero-menu-text {
-            /* Font from user's menu.html snippet */
             font-family: 'Mouldy Cheese', cursive;
-            font-size: 6rem; /* Adjust based on preference */
-            font-weight: 900; /* Extra bold */
-            letter-spacing: 0.15em; /* Spaced out to mimic distressed style */
+            font-size: 6rem; 
+            font-weight: 900;
+            letter-spacing: 0.15em; 
             text-transform: uppercase;
             color: #fff;
-            text-shadow: 4px 4px 10px rgba(0,0,0,0.7), -4px -4px 10px rgba(255,255,255,0.1); /* Subtle 3D/distressed effect */
-            -webkit-text-stroke: 1px rgba(0,0,0,0.2); /* Slight outline for better visibility */
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.7), -4px -4px 10px rgba(255,255,255,0.1); 
+            -webkit-text-stroke: 1px rgba(0,0,0,0.2); 
         }
         @media (min-width: 768px) {
             .hero-menu-text {
-                font-size: 10rem; /* Larger on desktop */
+                font-size: 10rem; 
             }
         }
 
         .parallax-bg {
-            background-image: url('Ramen.jpg'); /* User specified Ramen.jpg */
+            background-image: url('Ramen.jpg'); 
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            height: 100vh; /* Make hero shorter as it's just a menu header */
+            height: 100vh; 
         }
-       
-
-        /* Menu Categories section - now maroon background */
         #menu-categories {
-            background-color: var(--color-primary-maroon); /* Set to maroon */
+            background-color: var(--color-primary-maroon); 
         }
-        /* H2 title in menu categories */
         #menu-categories h2 {
-            color: var(--color-text-light); /* White text for "Explore By Category" on maroon background */
+            color: var(--color-text-light); 
         }
-
-
-        /* Category Image styling */
         .category-image {
             width: 180px;
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--color-text-light); /* White border on maroon background */
+            border: 2px solid var(--color-text-light); 
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             cursor: pointer;
         }
         .category-image:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); /* Stronger white glow on hover */
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); 
         }
-        /* Text under category images */
         .category-card p {
-            color: var(--color-text-light); /* White text for category names */
+            color: var(--color-text-light);
         }
-
-        /* Pull-out Menu Styling - now grey background */
         .pull-out-menu {
-            background-color: var(--color-bill-bg); /* Grey background for the bill-like menu */
+            background-color: var(--color-bill-bg); 
             width: 90%;
-            max-width: 1000px; /* Wider to fill more space */
+            max-width: 1000px; 
             margin: 0 auto;
-            padding: 0 2.5rem; /* Padding applied when active */
+            padding: 0 2.5rem; 
             border-radius: 16px;
-            /* Adjusted shadows for grey background */
             box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
             overflow: hidden;
             transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out, padding 0.7s ease-in-out;
-            max-height: 0; /* Start hidden */
+            max-height: 0; 
             opacity: 0;
             pointer-events: none;
             position: relative;
             z-index: 100;
         }
         .pull-out-menu.active {
-            max-height: 2000px; /* Sufficiently large to reveal content */
+            max-height: 2000px; 
             opacity: 1;
             pointer-events: auto;
-            padding: 2.5rem; /* Apply padding when active */
+            padding: 2.5rem; 
         }
-
-        /* Bill-like format inside pull-out (colors adjusted for grey background) */
         .pull-out-menu-title {
             font-family: 'Mouldy Cheese', cursive;
-            color: var(--color-bill-text-maroon); /* Maroon title on grey background */
+            color: var(--color-bill-text-maroon);
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 2rem;
-            border-bottom: 3px dashed var(--color-bill-border-dark); /* Dark dashed line on grey */
+            border-bottom: 3px dashed var(--color-bill-border-dark);
             padding-bottom: 1rem;
             text-transform: uppercase;
         }
 
         .pull-out-category-heading {
-            color: var(--color-bill-text-maroon); /* Maroon category headings on grey */
+            color: var(--color-bill-text-maroon); 
             font-size: 1.8rem;
             font-weight: 600;
             margin-top: 2rem;
             margin-bottom: 1rem;
             text-align: left;
-            border-bottom: 1px solid var(--color-bill-border-dark); /* Darker separator on grey */
+            border-bottom: 1px solid var(--color-bill-border-dark); 
             padding-bottom: 0.5rem;
         }
 
@@ -196,8 +178,8 @@
             justify-content: space-between;
             align-items: flex-start;
             padding: 0.8rem 0;
-            border-bottom: 1px dotted var(--color-bill-border-light); /* Lighter dotted line for grey background */
-            color: var(--color-bill-text-dark); /* Default text color within item on grey background */
+            border-bottom: 1px dotted var(--color-bill-border-light);
+            color: var(--color-bill-text-dark);
         }
         .pull-out-item:last-child {
             border-bottom: none;
@@ -211,25 +193,25 @@
             text-align: left;
         }
         .pull-out-item-name {
-            color: var(--color-bill-text-dark); /* Item name in dark grey/black on grey */
+            color: var(--color-bill-text-dark); 
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 1.4;
         }
         .pull-out-item-description {
-            color: var(--color-bill-text-dark); /* Dark grey for description on grey */
+            color: var(--color-bill-text-dark); 
             font-size: 0.95rem;
             line-height: 1.4;
             margin-top: 0.2rem;
         }
         .pull-out-item-note {
-            color: var(--color-bill-border-dark); /* Darker grey for notes on grey */
+            color: var(--color-bill-border-dark); 
             font-size: 0.8rem;
             font-style: italic;
             margin-top: 0.4rem;
         }
         .pull-out-item-price {
-            color: var(--color-bill-text-maroon); /* Price in maroon on grey */
+            color: var(--color-bill-text-maroon); 
             font-size: 1.4rem;
             font-weight: 800;
             white-space: nowrap;
@@ -238,7 +220,7 @@
         }
 
         .pull-out-close-button {
-            color: var(--color-bill-text-dark); /* Dark grey close button on grey */
+            color: var(--color-bill-text-dark);
             position: absolute;
             top: 1rem;
             right: 1.5rem;
@@ -249,15 +231,11 @@
         }
         .pull-out-close-button:hover,
         .pull-out-close-button:focus {
-            color: var(--color-primary-maroon); /* Maroon on hover */
+            color: var(--color-primary-maroon); 
         }
-        
-        /* Text for GST/Packing Charges in pull-out menu */
         .pull-out-menu .text-center.mt-8 {
-            color: var(--color-bill-border-dark); /* Darker grey for notes on grey background */
+            color: var(--color-bill-border-dark); 
         }
-
-        /* Footer styling matching index.html */
         footer.site-footer {
             background-color: var(--color-dark-bg);
             color: var(--color-text-light);
@@ -303,7 +281,7 @@
             transition: color 0.3s ease;
         }
         footer.site-footer ul li a:hover {
-            color: var(--color-light-accent); /* Keep original light accent on footer hover */
+            color: var(--color-light-accent); 
         }
         footer.site-footer .social-links a {
             color: var(--color-text-light);
@@ -311,7 +289,7 @@
             transition: color 0.3s ease;
         }
         footer.site-footer .social-links a:hover {
-            color: var(--color-light-accent); /* Keep original light accent on footer social hover */
+            color: var(--color-light-accent); 
         }
         footer.site-footer .bottom-bar {
             text-align: center;
@@ -323,8 +301,6 @@
     </style>
 </head>
 <body class="antialiased">
-
-    <!-- Header & Navigation (Adapted from index.html) -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -338,27 +314,22 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Mobile Menu Button -->
             <button class="md:hidden text-white focus:outline-none" aria-label="Toggle mobile menu">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
-        <!-- Mobile Menu (Hidden by default, toggled with JS) -->
         <div class="md:hidden bg-black py-2 hidden" id="mobile-menu">
             <nav class="flex flex-col items-center space-y-4">
                 <a href="index.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Home</a>
                 <a href="menu.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Menu</a>
-                <a href="about.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">About Us</a>
-                <a href="stores.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Stores</a>
                 <a href="contact.html" class="block text-white hover:bg-primary-maroon hover:text-light-accent text-lg font-medium transition-colors duration-300 py-2">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Home Section (Menu Header) -->
         <section id="home" class="relative flex items-center justify-center text-center parallax-bg">
             <div class="absolute inset-0 bg-black opacity-60 z-20"></div>
             <div class="relative z-30 p-8 max-w-5xl mx-auto rounded-xl">
@@ -371,49 +342,34 @@
             </div>
         </section>
 
-        <!-- Menu Categories Section -->
         <section id="menu-categories" class="py-24 text-gray-100" style="background-color: var(--color-primary-maroon);">
             <div class="container mx-auto px-4 md:px-6">
                 <h2 class="text-5xl font-extrabold text-center text-white mb-16">Explore By Category</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-12 justify-items-center">
-
-                    <!-- Noodle Category -->
                     <div class="flex flex-col items-center category-card">
-                        <img src="noodles.jpg" alt="Noodle Dishes" class="category-image" data-category="Noodles" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Noodles';">
+                        <img src="Noodles.jpg" alt="Noodle Dishes" class="category-image" data-category="Noodles" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Noodles';">
                         <p class="mt-6 text-2xl font-semibold text-white">Noodles & Ramen</p>
                     </div>
-
-                    <!-- Momos/Dumpling Category -->
                     <div class="flex flex-col items-center category-card">
                         <img src="Dumplings.jpg" alt="Dumpling Dishes" class="category-image" data-category="Momos" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Momos';">
                         <p class="mt-6 text-2xl font-semibold text-white">Momos & Dumplings</p>
                     </div>
-
-                    <!-- Desserts Category -->
                     <div class="flex flex-col items-center category-card">
                         <img src="Sundae.jpg" alt="Dessert Items" class="category-image" data-category="Desserts" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Desserts';">
                         <p class="mt-6 text-2xl font-semibold text-white">Sweet Endings</p>
                     </div>
-
-                    <!-- Drinks Category -->
                     <div class="flex flex-col items-center category-card">
                         <img src="Mojito.jpg" alt="Beverages" class="category-image" data-category="Drinks" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Drinks';">
                         <p class="mt-6 text-2xl font-semibold text-white">Refreshments</p>
                     </div>
-
-                    <!-- Appetizers Category (New) -->
                     <div class="flex flex-col items-center category-card">
                         <img src="Fries.jpg" alt="Appetizers" class="category-image" data-category="Appetizers" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Appetizers';">
                         <p class="mt-6 text-2xl font-semibold text-white">Appetizers</p>
                     </div>
-
-                    <!-- Cravings Category (New) -->
                     <div class="flex flex-col items-center category-card">
                         <img src="Momo.jpg" alt="Cravings" class="category-image" data-category="Cravings" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Cravings';">
                         <p class="mt-6 text-2xl font-semibold text-white">Cravings</p>
                     </div>
-
-                    <!-- Combos Category (New) -->
                     <div class="flex flex-col items-center category-card">
                         <img src="combos.jpg" alt="Combos" class="category-image" data-category="Combos" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Combos';">
                         <p class="mt-6 text-2xl font-semibold text-white">Combos</p>
