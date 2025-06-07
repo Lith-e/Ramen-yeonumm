@@ -8,380 +8,316 @@
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Mouldy+Cheese&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Mouldy+Cheese&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-  
     :root {
       --color-primary-maroon: #6a0d0d;
-      --color-dark-bg: #000;
-      --color-light-accent: #ffcc00;
-      --color-text-light: #fff;
+      --color-white: #ffffff;
+      --color-secondary-black: #000000;
+      --color-accent-yellow: #ffcc00; /* Used ONLY for franchise stats */
+      --color-text-light: #f0f0f0;
+      --color-text-dark: #333333;
+      --color-background-light: #f8f8f8;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f8f8f8; 
-      color: #333; 
+      background-color: var(--color-background-light);
     }
 
-
-    header.site-header {
-      background-color: var(--color-dark-bg);
-      padding: 10px 20px;
-      color: var(--color-text-light);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    header.site-header .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header.site-header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    header.site-header .logo img {
-      height: 40px;
-      width: auto;
-    }
-    header.site-header h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--color-text-light);
-      margin: 0;
-    }
-    header.site-header nav ul.nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-    header.site-header nav ul.nav-menu li a {
-      color: var(--color-text-light);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 8px 12px;
-      transition: background 0.3s ease, color 0.3s ease;
-      border-radius: 4px;
-    }
-    header.site-header nav ul.nav-menu li a:hover,
-    header.site-header nav ul.nav-menu li a:focus {
-      background-color: var(--color-primary-maroon);
-      color: var(--color-light-accent);
-    }
-
- 
-    .section {
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .section h2 {
+    h2 {
       font-family: 'Mouldy Cheese', cursive;
-      font-size: 2.8rem;
-      color: var(--color-primary-maroon);
-      margin-bottom: 2rem;
+      font-size: 3.2rem;
       text-align: center;
-    }
-
-
-    .separator {
-        border-top: 1px solid #ccc;
-        margin: 4rem auto;
-        width: 80%;
-        max-width: 800px;
-    }
-
-    .contact-info {
-      max-width: 600px;
-      margin: 0 auto 4rem auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      text-align: left;
-    }
-    .contact-info p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-      color: #333;
-    }
-    .contact-info strong {
-      color: var(--color-primary-maroon);
-    }
-    .contact-info a {
-      color: var(--color-primary-maroon);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    .contact-info a:hover {
-      color: var(--color-light-accent);
-    }
-
-    .store-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-      justify-content: center;
-    }
-    .store-item {
-      background: var(--color-text-light);
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .store-item:hover {
-      transform: translateY(-5px);
-    }
-    .store-item a {
-      text-decoration: none;
-      color: inherit;
-      display: block; 
-    }
-    .store-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
       margin-bottom: 1rem;
     }
-    .store-item p {
-      font-size: 1.1rem;
-      color: var(--color-primary-maroon);
-      font-weight: 600;
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    
+    .section-container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1.5rem;
     }
 
-    .franchise-info {
-      max-width: 700px;
-      margin: 2rem auto;
-      background-color: var(--color-primary-maroon); 
-      color: var(--color-text-light);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-      text-align: left;
+    /* --- Header --- */
+    header.site-header {
+      background: var(--color-secondary-black);
+      padding: 1rem 1.5rem;
+      position: sticky; top: 0; z-index: 50;
     }
-    .franchise-info p {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+    header.site-header .section-container { display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; }
+    .logo-svg { color: var(--color-white); margin-right: 0.75rem; }
+    header.site-header .logo h1 { font-size: 1.5rem; font-weight: 700; color: var(--color-white); }
+    header.site-header nav ul { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none;}
+    header.site-header nav ul li a {
+        color: var(--color-white);
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .franchise-info strong {
-      color: var(--color-light-accent);
+    header.site-header nav ul li a:hover,
+    header.site-header nav ul li a:active {
+        background-color: var(--color-primary-maroon);
+        color: var(--color-white);
     }
-    .franchise-info a {
-      color: var(--color-light-accent);
-      text-decoration: underline;
-      font-weight: 600;
-      transition: color 0.3s ease;
+
+
+    /* --- Contact Section --- */
+    .contact-section {
+      background-color: var(--color-primary-maroon);
+      color: var(--color-white);
+      padding: 4rem 0;
     }
-    .franchise-info a:hover {
-      color: var(--color-text-light);
-    }
-    footer.site-footer {
-      background-color: var(--color-dark-bg);
-      color: var(--color-text-light);
-      padding: 40px 20px 20px;
-    }
-    footer.site-footer .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-between;
-    }
-    footer.site-footer .footer-section {
-      flex: 1 1 250px;
-    }
-    footer.site-footer .footer-logo-text {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    footer.site-footer p {
-      margin-top: 10px;
-      font-size: 0.95rem;
-    }
-    footer.site-footer h4 {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-      border-bottom: 1px solid #555;
-    }
-    footer.site-footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    footer.site-footer ul li a {
-      color: var(--color-text-light);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 4px 0;
-      display: block;
-      transition: color 0.3s ease;
-    }
-    footer.site-footer ul li a:hover {
-      color: var(--color-light-accent);
-    }
-    footer.site-footer .social-links a {
-      color: var(--color-text-light);
-      margin-right: 12px;
-      transition: color 0.3s ease;
-    }
-    footer.site-footer .social-links a:hover {
-      color: var(--color-light-accent);
-    }
-    footer.site-footer .bottom-bar {
+    .contact-section h2 { color: var(--color-white); }
+    .contact-section .subtitle {
       text-align: center;
-      padding-top: 20px;
-      font-size: 0.85rem;
-      border-top: 1px solid #444;
-      margin-top: 30px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
+    /* MODIFIED: Changed alignment for "justify" effect */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Changed from 'center' to 'flex-start' for left alignment */
+      max-width: fit-content; /* Ensure the container doesn't stretch full-width */
+      margin-left: auto;     /* Center the container itself */
+      margin-right: auto;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .contact-info p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .contact-info .icon {
+      margin-right: 0.5rem;
+      width: 20px; /* Give icons a fixed width to align text perfectly */
+      text-align: center;
+    }
+    .contact-info .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      width: 100%; /* Make social links container full width of parent */
+      justify-content: center; /* Center the social icons */
+    }
+    .contact-info .social-links a {
+      color: var(--color-white);
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+    }
+    .contact-info .social-links a:hover {
+      transform: translateY(-3px);
+    }
+    
+    /* --- Store Section --- */
+    .store-section {
+      background-color: var(--color-white);
+      padding: 4rem 0;
+    }
+    .store-section h2 { color: var(--color-primary-maroon); }
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .store-post {
+      background-color: var(--color-white); border: 1px solid #eee;
+      border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .store-post:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .store-post-image { width: 100%; height: 200px; object-fit: cover; }
+    .store-post-content { padding: 1.2rem; }
+    .store-post-content h3 { font-size: 1.3rem; color: var(--color-text-dark); margin-bottom: 0.4rem; }
+    .store-post-content p { margin: 0; color: #6c757d; font-size: 0.9rem; line-height: 1.4; }
+    .map-link {
+      display: inline-block; margin-top: 0.8rem; background: var(--color-primary-maroon);
+      color: var(--color-white); text-decoration: none; padding: 0.5rem 1rem;
+      border-radius: 50px; font-weight: 600; transition: background-color 0.3s;
+      font-size: 0.9rem;
+    }
+    .map-link:hover { background-color: #8e1a1a; }
+    
+    /* --- Franchise Section --- */
+    .franchise-section {
+      padding: 5rem 1.5rem;
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop');
+      background-size: cover; background-position: center; background-attachment: fixed; text-align: center;
+    }
+    .franchise-content h2 { color: var(--color-white); text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+    /* MODIFIED: Fixed text overlap by changing margin-top */
+    .franchise-content .subtitle {
+        color: rgba(255,255,255,0.8);
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-top: 0.5rem; /* Changed from -1rem to a positive value */
+        margin-bottom: 2rem;
+    }
+    .franchise-stats { display: flex; justify-content: center; gap: 2rem; margin: 2.5rem 0; flex-wrap: wrap; }
+    .stat-item .number { font-size: 2.5rem; font-weight: 800; color: var(--color-accent-yellow); }
+    .stat-item .text { font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.8); }
+    .franchise-content p {
+      font-size: 1.1rem; margin: 2rem auto; color: var(--color-text-light);
+      max-width: 700px; line-height: 1.7;
+      text-align: justify;
+    }
+    .btn-franchise {
+      background: var(--color-white); color: var(--color-primary-maroon);
+      text-decoration: none; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 800;
+      transition: background-color 0.3s, transform 0.2s; display: inline-block;
+    }
+    .btn-franchise:hover { background-color: rgba(255,255,255,0.9); transform: scale(1.05); }
+
+    /* --- Footer --- */
+    footer.site-footer { background-color: var(--color-secondary-black); color: var(--color-text-light); padding: 3rem 1.5rem; }
+    footer.site-footer .section-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
+    }
+    footer.site-footer h4 { margin-bottom: 1rem; font-size: 1.2rem; color: var(--color-white); border-bottom: 1px solid var(--color-primary-maroon); padding-bottom: 0.5rem; }
+    footer.site-footer ul { list-style: none; padding: 0; margin: 0; }
+    footer.site-footer ul li a { color: var(--color-text-light); text-decoration: none; padding: 5px 0; display: block; transition: opacity 0.3s; }
+    footer.site-footer ul li a:hover { opacity: 0.7; }
+    footer.site-footer p { text-align: justify; }
+    footer.site-footer .social-links a { margin-right: 1rem; transition: opacity 0.3s; }
+    footer.site-footer .social-links a:hover { opacity: 0.7; }
+    footer.site-footer .bottom-bar { text-align: center; padding-top: 2rem; font-size: 0.9rem; border-top: 1px solid #444; margin-top: 2rem; grid-column: 1 / -1; }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="section-container">
       <div class="logo">
-        <img src="logo.webp" alt="Tibetan Bowl Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';" />
-        <h1>Tibetan Bowl</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg"><path d="M2 12.38c0-3.86 3.14-7 7-7h6c3.86 0 7 3.14 7 7 0 3.87-3.13 7-7 7H9c-3.86 0-7-3.13-7-7z"></path><path d="M12 12.38V19.5"></path></svg>
+        <h1 class="text-xl md:text-2xl">Tibetan Bowl</h1>
       </div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <nav><ul><li><a href="#">Home</a></li><li><a href="#">Menu</a></li><li><a href="#">Contact</a></li></ul></nav>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <h2>Contact Us</h2>
-      <p>We'd love to hear from you! Reach us by the methods below:</p>
-      <div class="contact-info">
-        <p><strong>Phone:</strong> +91-99999-99999</p>
-        <p><strong>Email:</strong> info@tibetanbowl.in</p>
-        <p><strong>Address:</strong> 123 Ramen Street, Spicy City, Chennai, Tamil Nadu, India</p>
-        <p>
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
-        </p>
-      </div>
+    <section class="contact-section">
+        <div class="section-container">
+            <h2>Get in Touch</h2>
+            <p class="subtitle">Have a question, feedback, or just want to say hello? Reach out to us through our contact details below!</p>
+            
+            <div class="contact-info">
+              <p><i class="fa fa-phone icon"></i> +91 98765 43210</p>
+              <p><i class="fa fa-envelope icon"></i> contact@tibetanbowl.in</p>
+              <p><i class="fa fa-map-marker icon"></i> 123 Main Street, Chennai, Tamil Nadu, India</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+              </div>
+            </div>
+        </div>
     </section>
-    <div class="separator"></div>
-    <section class="section">
-      <h2>Our Store Locations</h2>
-      <div class="store-grid">
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=Chennai+Central+Branch" target="_blank">
-            <img src="central.png" alt="Chennai Central" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Chennai+Central';"> 
-            <p>Chennai Central Branch</p>
-          </a>
+
+    <section class="store-section">
+        <div class="section-container">
+            <h2>Our Locations</h2>
+            <div class="store-grid">
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Chennai+Central" alt="Chennai Central Branch">
+                <div class="store-post-content">
+                  <h3>Chennai Central</h3>
+                  <p>12, Station Road, Park Town, Chennai, Tamil Nadu 600003</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=T.+Nagar" alt="T. Nagar Outlet">
+                <div class="store-post-content">
+                  <h3>T. Nagar Outlet</h3>
+                  <p>25, Pondy Bazaar, Thyagaraya Nagar, Chennai, Tamil Nadu 600017</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Velachery" alt="Velachery Shop">
+                <div class="store-post-content">
+                  <h3>Velachery Shop</h3>
+                  <p>5, 100 Feet Bypass Road, Velachery, Chennai, Tamil Nadu 600042</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=OMR+Branch" alt="OMR Branch">
+                <div class="store-post-content">
+                  <h3>OMR IT Corridor</h3>
+                  <p>Unit 7, Tech Park, Old Mahabalipuram Rd, Chennai, Tamil Nadu 600119</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Anna+Nagar" alt="Anna Nagar Branch">
+                <div class="store-post-content">
+                  <h3>Anna Nagar Arch</h3>
+                  <p>44, 2nd Avenue, Anna Nagar East, Chennai, Tamil Nadu 600102</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+              <div class="store-post">
+                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Adyar" alt="Adyar Branch">
+                <div class="store-post-content">
+                  <h3>Adyar Creek</h3>
+                  <p>7, Gandhi Nagar Main Rd, Adyar, Chennai, Tamil Nadu 600020</p>
+                  <a href="https://www.google.com/maps" target="_blank" class="map-link"><i class="fa fa-map-marker"></i> View on Map</a>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=T.Nagar+Outlet" target="_blank">
-            <img src="T-nagar.png" alt="T. Nagar Outlet" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=T.+Nagar';">
-            <p>T. Nagar Outlet</p>
-          </a>
-        </div>
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=Velachery+Shop" target="_blank">
-            <img src="Velachery.png" alt="Velachery Shop" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Velachery';">
-            <p>Velachery Shop</p>
-          </a>
-        </div>
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=Mogapair+Outlet" target="_blank">
-            <img src="Mogapair.png" alt="Mogapair" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Mogapair';">
-            <p>Mogapair Outlet</p>
-          </a>
-        </div>
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=OMR+Branch" target="_blank">
-            <img src="OMRbranch.png" alt="OMR Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=OMR+Branch';">
-            <p>OMR Branch</p>
-          </a>
-        </div>
-        <div class="store-item">
-          <a href="https://maps.google.com/?q=Anna+Nagar+Branch" target="_blank">
-            <img src="hosur.png" alt="Anna Nagar Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Anna+Nagar';">
-            <p>Hosur Outlet</p>
-          </a>
-        </div>
-      </div>
     </section>
-    <div class="separator"></div>
-    <section class="section">
-      <h2>Franchise Request</h2>
-      <p>Want to open your own Tibetan Bowl store? Reach out to us for partnership and setup support.</p>
-      <div class="franchise-info">
-        <p><strong>Email:</strong> <a href="mailto:franchise@tibetanbowl.com">franchise@tibetanbowl.com</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919999999999" target="_blank">Click here to chat</a></p>
-        <p><strong>Support Includes:</strong> Brand licensing, training, setup guidance, and marketing assistance.</p>
+
+    <section class="franchise-section">
+      <div class="section-container franchise-content">
+          <h2>Become a Partner</h2>
+          <p class="subtitle">Join the Tibetan Bowl family and bring our flavors to your city.</p>
+          <div class="franchise-stats">
+              <div class="stat-item"><div class="number">6+</div><div class="text">Successful Stores</div></div>
+              <div class="stat-item"><div class="number">10,000+</div><div class="text">Happy Customers</div></div>
+          </div>
+          <p>We offer a comprehensive partnership model that includes brand licensing, operational training, supply chain support, and marketing assistance to ensure your success. Our team is dedicated to helping you launch and grow a profitable Tibetan Bowl franchise in your local community.</p>
+          <a href="mailto:franchise@tibetanbowl.com" class="btn-franchise">Request Franchise Info</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="section-container">
       <div class="footer-section">
-        <div class="flex items-center gap-2">
-          <img src="logo.webp" alt="Tibetan Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';" />
-          <h3 class="footer-logo-text">Tibetan Bowl</h3>
-        </div>
-        <p>Making exotic dishes affordable for everyone.</p>
+        <h4>About Us</h4>
+        <p>Tibetan Bowl is dedicated to making exotic and flavorful dishes accessible and affordable for everyone. Taste the tradition, feel the flavor.</p>
       </div>
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact-stores.html">Contact Us</a></li> 
-        </ul>
+        <ul><li><a href="#">Home</a></li><li><a href="#">Menu</a></li><li><a href="#">Contact & Stores</a></li><li><a href="#">Franchise</a></li></ul>
       </div>
       <div class="footer-section">
-        <h4>Contact Us</h4>
-        <p class="mb-1"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
-        <p class="mb-1"><i class="fa fa-phone"></i> &nbsp; +91 99999 99999</p>
-        <p class="mb-4"><i class="fa fa-envelope"></i> &nbsp; hello@tibetanbowl.com</p>
-
-        <div class="social-links mt-4">
-          <a href="https://facebook.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="Facebook">
-              <i class="fa fa-facebook fa-lg"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="Instagram">
-              <i class="fa fa-instagram fa-lg"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="YouTube">
-              <i class="fa fa-youtube fa-lg"></i>
-          </a>
-        </div>
+        <h4>Contact Info</h4>
+        <p><i class="fa fa-phone" style="margin-right: 8px;"></i> +91 99999 99999</p>
+        <p><i class="fa fa-envelope" style="margin-right: 8px;"></i> info@tibetanbowl.in</p>
+        <div class="social-links mt-4"><a href="#" target="_blank"><i class="fa fa-facebook-square fa-lg"></i></a><a href="#" target="_blank"><i class="fa fa-instagram fa-lg"></i></a><a href="#" target="_blank"><i class="fa fa-youtube-play fa-lg"></i></a></div>
       </div>
     </div>
-    <div class="bottom-bar">
-      © 2025 Tibetan Bowl. All rights reserved.
-    </div>
+    <div class="bottom-bar"> © 2025 Tibetan Bowl. All Rights Reserved. </div>
   </footer>
 </body>
 </html>
