@@ -8,28 +8,28 @@
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-  <!-- Google Fonts: Inter for general text, Mouldy Cheese for titles -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Mouldy+Cheese&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Color Variables based on your provided index.html and requests */
+  
     :root {
       --color-primary-maroon: #6a0d0d;
       --color-dark-bg: #000;
-      --color-light-accent: #ffcc00; /* "nice yellow" */
+      --color-light-accent: #ffcc00;
       --color-text-light: #fff;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f8f8f8; /* Light background for the overall page body */
-      color: #333; /* Dark text for readability on light backgrounds */
+      background-color: #f8f8f8; 
+      color: #333; 
     }
 
-    /* Header styles matching index.html */
+
     header.site-header {
       background-color: var(--color-dark-bg);
       padding: 10px 20px;
@@ -83,7 +83,7 @@
       color: var(--color-light-accent);
     }
 
-    /* General section styling */
+ 
     .section {
       padding: 4rem 1rem;
       max-width: 1200px;
@@ -98,7 +98,7 @@
       text-align: center;
     }
 
-    /* Separator line style */
+
     .separator {
         border-top: 1px solid #ccc;
         margin: 4rem auto;
@@ -106,7 +106,6 @@
         max-width: 800px;
     }
 
-    /* Contact Info styles */
     .contact-info {
       max-width: 600px;
       margin: 0 auto 4rem auto;
@@ -134,7 +133,6 @@
       color: var(--color-light-accent);
     }
 
-    /* Store Locations Grid styles */
     .store-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -156,7 +154,7 @@
     .store-item a {
       text-decoration: none;
       color: inherit;
-      display: block; /* Make the whole item clickable */
+      display: block; 
     }
     .store-item img {
       width: 100%;
@@ -171,12 +169,11 @@
       font-weight: 600;
     }
 
-    /* Franchise Info styles */
     .franchise-info {
       max-width: 700px;
       margin: 2rem auto;
-      background-color: var(--color-primary-maroon); /* Maroon background */
-      color: var(--color-text-light); /* White text */
+      background-color: var(--color-primary-maroon); 
+      color: var(--color-text-light);
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -198,8 +195,6 @@
     .franchise-info a:hover {
       color: var(--color-text-light);
     }
-
-    /* Footer styles from your index.html */
     footer.site-footer {
       background-color: var(--color-dark-bg);
       color: var(--color-text-light);
@@ -267,22 +262,20 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <img src="images/logo.webp" alt="Tibetan Bowl Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';" />
+        <img src="logo.webp" alt="Tibetan Bowl Logo" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';" />
         <h1>Tibetan Bowl</h1>
       </div>
       <nav>
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
-          
-          <li><a href="contact-stores.html">Contact</a></li> <!-- Updated link -->
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Contact Us Section -->
     <section class="section">
       <h2>Contact Us</h2>
       <p>We'd love to hear from you! Reach us by the methods below:</p>
@@ -296,45 +289,40 @@
         </p>
       </div>
     </section>
-
-    <!-- Separator Line 1 -->
     <div class="separator"></div>
-
-    <!-- Store Locations Section -->
     <section class="section">
       <h2>Our Store Locations</h2>
       <div class="store-grid">
         <div class="store-item">
           <a href="https://maps.google.com/?q=Chennai+Central+Branch" target="_blank">
-            <img src="images/central.png" alt="Chennai Central" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Chennai+Central';"> 
+            <img src="central.png" alt="Chennai Central" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Chennai+Central';"> 
             <p>Chennai Central Branch</p>
           </a>
         </div>
         <div class="store-item">
           <a href="https://maps.google.com/?q=T.Nagar+Outlet" target="_blank">
-            <img src="images/T-nagar.png" alt="T. Nagar Outlet" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=T.+Nagar';">
+            <img src="T-nagar.png" alt="T. Nagar Outlet" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=T.+Nagar';">
             <p>T. Nagar Outlet</p>
           </a>
         </div>
         <div class="store-item">
           <a href="https://maps.google.com/?q=Velachery+Shop" target="_blank">
-            <img src="images/Velachery.png" alt="Velachery Shop" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Velachery';">
+            <img src="Velachery.png" alt="Velachery Shop" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Velachery';">
             <p>Velachery Shop</p>
           </a>
         </div>
         <div class="store-item">
           <a href="https://maps.google.com/?q=Mogapair+Outlet" target="_blank">
-            <img src="images/Mogapair.png" alt="Mogapair" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Mogapair';">
+            <img src="Mogapair.png" alt="Mogapair" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Mogapair';">
             <p>Mogapair Outlet</p>
           </a>
         </div>
         <div class="store-item">
           <a href="https://maps.google.com/?q=OMR+Branch" target="_blank">
-            <img src="images/OMRbranch.png" alt="OMR Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=OMR+Branch';">
+            <img src="OMRbranch.png" alt="OMR Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=OMR+Branch';">
             <p>OMR Branch</p>
           </a>
         </div>
-        <!-- New Store Item -->
         <div class="store-item">
           <a href="https://maps.google.com/?q=Anna+Nagar+Branch" target="_blank">
             <img src="hosur.png" alt="Anna Nagar Branch" onerror="this.onerror=null;this.src='https://placehold.co/280x200/6a0d0d/FFFFFF?text=Anna+Nagar';">
@@ -343,11 +331,7 @@
         </div>
       </div>
     </section>
-
-    <!-- Separator Line 2 -->
     <div class="separator"></div>
-
-    <!-- Franchise Request Section -->
     <section class="section">
       <h2>Franchise Request</h2>
       <p>Want to open your own Tibetan Bowl store? Reach out to us for partnership and setup support.</p>
@@ -361,26 +345,21 @@
 
   <footer class="site-footer">
     <div class="container">
-      <!-- Logo and tagline -->
       <div class="footer-section">
         <div class="flex items-center gap-2">
-          <img src="images/logo.webp" alt="Tibetan Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';" />
+          <img src="logo.webp" alt="Tibetan Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';" />
           <h3 class="footer-logo-text">Tibetan Bowl</h3>
         </div>
         <p>Making exotic dishes affordable for everyone.</p>
       </div>
-
-      <!-- Quick Links -->
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact-stores.html">Contact Us</a></li> <!-- Updated link -->
+          <li><a href="contact-stores.html">Contact Us</a></li> 
         </ul>
       </div>
-
-      <!-- Contact & Social -->
       <div class="footer-section">
         <h4>Contact Us</h4>
         <p class="mb-1"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
@@ -400,8 +379,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Bottom bar -->
     <div class="bottom-bar">
       © 2025 Tibetan Bowl. All rights reserved.
     </div>
