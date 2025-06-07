@@ -16,7 +16,7 @@
       --color-primary-maroon: #6a0d0d;
       --color-white: #ffffff;
       --color-secondary-black: #000000;
-      --color-accent-yellow: #ffcc00; /* Used ONLY for franchise stats */
+      --color-accent-yellow: #ffcc00; 
       --color-text-light: #f0f0f0;
       --color-text-dark: #333333;
       --color-background-light: #f8f8f8;
@@ -73,7 +73,6 @@
     }
 
 
-    /* --- Contact Section --- */
     .contact-section {
       background-color: var(--color-primary-maroon);
       color: var(--color-white);
@@ -89,13 +88,13 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* MODIFIED: Changed alignment for "justify" effect */
+ 
     .contact-info {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Changed from 'center' to 'flex-start' for left alignment */
-      max-width: fit-content; /* Ensure the container doesn't stretch full-width */
-      margin-left: auto;     /* Center the container itself */
+      align-items: flex-start; 
+      max-width: fit-content;
+      margin-left: auto;
       margin-right: auto;
       gap: 1rem;
       margin-bottom: 3rem;
@@ -106,15 +105,15 @@
     }
     .contact-info .icon {
       margin-right: 0.5rem;
-      width: 20px; /* Give icons a fixed width to align text perfectly */
+      width: 20px;
       text-align: center;
     }
     .contact-info .social-links {
       display: flex;
       gap: 1.5rem;
       margin-top: 1rem;
-      width: 100%; /* Make social links container full width of parent */
-      justify-content: center; /* Center the social icons */
+      width: 100%; \
+      justify-content: center; 
     }
     .contact-info .social-links a {
       color: var(--color-white);
@@ -125,7 +124,6 @@
       transform: translateY(-3px);
     }
     
-    /* --- Store Section --- */
     .store-section {
       background-color: var(--color-white);
       padding: 4rem 0;
@@ -154,19 +152,19 @@
     }
     .map-link:hover { background-color: #8e1a1a; }
     
-    /* --- Franchise Section --- */
+   
     .franchise-section {
       padding: 5rem 1.5rem;
       background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop');
       background-size: cover; background-position: center; background-attachment: fixed; text-align: center;
     }
     .franchise-content h2 { color: var(--color-white); text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-    /* MODIFIED: Fixed text overlap by changing margin-top */
+   
     .franchise-content .subtitle {
         color: rgba(255,255,255,0.8);
         font-weight: 500;
         font-size: 1.1rem;
-        margin-top: 0.5rem; /* Changed from -1rem to a positive value */
+        margin-top: 0.5rem; 
         margin-bottom: 2rem;
     }
     .franchise-stats { display: flex; justify-content: center; gap: 2rem; margin: 2.5rem 0; flex-wrap: wrap; }
@@ -203,7 +201,7 @@
   <header class="site-header">
     <div class="section-container">
       <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg"><path d="M2 12.38c0-3.86 3.14-7 7-7h6c3.86 0 7 3.14 7 7 0 3.87-3.13 7-7 7H9c-3.86 0-7-3.13-7-7z"></path><path d="M12 12.38V19.5"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg"><path d="logo.webp"></path><path d="M12 12.38V19.5"></path></svg>
         <h1 class="text-xl md:text-2xl">Tibetan Bowl</h1>
       </div>
       <nav><ul><li><a href="#">Home</a></li><li><a href="#">Menu</a></li><li><a href="#">Contact</a></li></ul></nav>
@@ -235,7 +233,7 @@
             <h2>Our Locations</h2>
             <div class="store-grid">
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Chennai+Central" alt="Chennai Central Branch">
+                <img class="store-post-image" src="central.jpg" alt="Chennai Central Branch">
                 <div class="store-post-content">
                   <h3>Chennai Central</h3>
                   <p>12, Station Road, Park Town, Chennai, Tamil Nadu 600003</p>
@@ -243,7 +241,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=T.+Nagar" alt="T. Nagar Outlet">
+                <img class="store-post-image" src="Mogapair.jpg" alt="T. Nagar Outlet">
                 <div class="store-post-content">
                   <h3>T. Nagar Outlet</h3>
                   <p>25, Pondy Bazaar, Thyagaraya Nagar, Chennai, Tamil Nadu 600017</p>
@@ -251,7 +249,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Velachery" alt="Velachery Shop">
+                <img class="store-post-image" src="hosur.jpg" alt="Velachery Shop">
                 <div class="store-post-content">
                   <h3>Velachery Shop</h3>
                   <p>5, 100 Feet Bypass Road, Velachery, Chennai, Tamil Nadu 600042</p>
@@ -259,7 +257,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=OMR+Branch" alt="OMR Branch">
+                <img class="store-post-image" src="OMRbranch.jpg" alt="OMR Branch">
                 <div class="store-post-content">
                   <h3>OMR IT Corridor</h3>
                   <p>Unit 7, Tech Park, Old Mahabalipuram Rd, Chennai, Tamil Nadu 600119</p>
@@ -267,7 +265,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Anna+Nagar" alt="Anna Nagar Branch">
+                <img class="store-post-image" src="Velachery.jpg alt="Anna Nagar Branch">
                 <div class="store-post-content">
                   <h3>Anna Nagar Arch</h3>
                   <p>44, 2nd Avenue, Anna Nagar East, Chennai, Tamil Nadu 600102</p>
@@ -275,7 +273,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="https://placehold.co/600x400/6a0d0d/FFFFFF?text=Adyar" alt="Adyar Branch">
+                <img class="store-post-image" src="T-nagar.jpg" alt="Adyar Branch">
                 <div class="store-post-content">
                   <h3>Adyar Creek</h3>
                   <p>7, Gandhi Nagar Main Rd, Adyar, Chennai, Tamil Nadu 600020</p>
