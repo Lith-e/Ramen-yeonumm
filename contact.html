@@ -46,30 +46,53 @@
       margin-right: auto;
       padding: 0 1.5rem;
     }
-
-    /* --- Header --- */
     header.site-header {
-      background: var(--color-secondary-black);
-      padding: 1rem 1.5rem;
-      position: sticky; top: 0; z-index: 50;
-    }
-    header.site-header .section-container { display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; }
-    .logo-svg { color: var(--color-white); margin-right: 0.75rem; }
-    header.site-header .logo h1 { font-size: 1.5rem; font-weight: 700; color: var(--color-white); }
-    header.site-header nav ul { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none;}
-    header.site-header nav ul li a {
-        color: var(--color-white);
-        font-weight: 600;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    header.site-header nav ul li a:hover,
-    header.site-header nav ul li a:active {
-        background-color: var(--color-primary-maroon);
-        color: var(--color-white);
+            background-color: var(--color-dark-bg);
+            padding: 10px 20px;
+            color: var(--color-text-light);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        header.site-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header.site-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        header.site-header .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-text-light);
+            margin: 0;
+        }
+        header.site-header nav ul.nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        header.site-header nav ul.nav-menu li a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: background 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
+        }
+        header.site-header nav ul.nav-menu li a:hover,
+        header.site-header nav ul.nav-menu li a:focus {
+            background-color: var(--color-primary-maroon);
+            color: var(--color-text-light)
     }
 
 
@@ -263,7 +286,7 @@
                 </div>
               </div>
               <div class="store-post">
-                <img class="store-post-image" src="Velachery.jpg alt="Anna Nagar Branch">
+                <img class="store-post-image" src="Velachery.png" alt="Anna Nagar Branch">
                 <div class="store-post-content">
                   <h3>Anna Nagar Arch</h3>
                   <p>44, 2nd Avenue, Anna Nagar East, Chennai, Tamil Nadu 600102</p>
