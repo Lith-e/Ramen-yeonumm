@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Tibetan Bowl</title>
+    <title>Menu - Spicy Bowl</title>
  
     <script src="https://cdn.tailwindcss.com"></script>
    
@@ -304,8 +304,8 @@
     <header class="site-header">
         <div class="container">
             <div class="logo">
-                <img src="logo.webp" alt="Tibetan Bowl Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';">
-                <span class="logo-text">Tibetan Bowl</span>
+                <img src="logo.png" alt="Spicy Bowl Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/40x40/000000/FFFFFF?text=Logo';">
+                <span class="logo-text">Spicy Bowl</span>
             </div>
             <nav>
                 <ul class="nav-menu hidden md:flex">
@@ -352,7 +352,7 @@
                     </div>
                     <div class="flex flex-col items-center category-card">
                         <img src="Dumplings.jpg" alt="Dumpling Dishes" class="category-image" data-category="Momos" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Momos';">
-                        <p class="mt-6 text-2xl font-semibold text-white">Momos & Dumplings</p>
+                        <p class="mt-6 text-2xl font-semibold text-white">Dumplings</p>
                     </div>
                     <div class="flex flex-col items-center category-card">
                         <img src="Sundae.jpg" alt="Dessert Items" class="category-image" data-category="Desserts" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Desserts';">
@@ -396,8 +396,8 @@
                         <!-- Menu items will be rendered here by JavaScript -->
                     </div>
                     <div class="text-center mt-8" style="color: var(--color-bill-border-dark);">
-                        <p>GST 5%/- Applicable on all items.</p>
-                        <p>Packing charges: ₹10/- per order.</p>
+                        <p> 5%/- Applicable on all items.</p>
+                        <p>Packing charges: $10/- per order.</p>
                     </div>
                 </div>
             </div>
@@ -411,8 +411,8 @@
             <!-- Logo and tagline -->
             <div class="footer-section">
                 <div class="flex items-center gap-2">
-                    <img src="images/logo.webp" alt="Tibetan Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';">
-                    <h3 class="footer-logo-text">Tibetan Bowl</h3>
+                    <img src="images/logo.png" alt="Spicy Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';">
+                    <h3 class="footer-logo-text">Spicy Bowl</h3>
                 </div>
                 <p>Making exotic dishes affordable for everyone.</p>
             </div>
@@ -431,8 +431,8 @@
             <div class="footer-section">
                 <h4>Contact Us</h4>
                 <p class="mb-1"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
-                <p class="mb-1"><i class="fa fa-phone"></i> &nbsp; +91 99999 99999</p>
-                <p class="mb-4"><i class="fa fa-envelope"></i> &nbsp; hello@tibetanbowl.com</p>
+                <p class="mb-1"><i class="fa fa-phone"></i> &nbsp; 99 999 99 999</p>
+                <p class="mb-4"><i class="fa fa-envelope"></i> &nbsp; hello@spicybowl.com</p>
 
                 <div class="social-links mt-4">
                     <a href="https://facebook.com" target="_blank" class="text-white hover:text-light-accent text-xl" aria-label="Facebook">
@@ -450,7 +450,7 @@
 
         <!-- Bottom bar -->
         <div class="bottom-bar">
-            © 2025 Tibetan Bowl. All rights reserved.
+            © 2025 Spicy Bowl. All rights reserved.
         </div>
     </footer>
 
@@ -647,7 +647,7 @@
             function openPullOutMenu(category) {
                 pullOutMenuTitle.textContent = category + " Menu";
                 let categoryData = {};
-                // Determine which broad category to open based on data-category attribute
+            
                 if (category === "Momos") {
                     categoryData = allMenuItems.Momos;
                 } else if (category === "Noodles") {
@@ -656,31 +656,30 @@
                     categoryData = allMenuItems.Desserts;
                 } else if (category === "Drinks") {
                     categoryData = allMenuItems.Drinks;
-                } else if (category === "Appetizers") { // Include these if they map to a category image
+                } else if (category === "Appetizers") { 
                     categoryData = allMenuItems.Appetizers;
-                } else if (category === "Cravings") { // Include these if they map to a category image
+                } else if (category === "Cravings") { 
                     categoryData = allMenuItems.Cravings;
-                } else if (category === "Combos") { // Include these if they map to a category image
+                } else if (category === "Combos") { 
                     categoryData = allMenuItems.Combos;
-                } else if (category === "Add-Ons") { // Include these if they map to a category image
+                } else if (category === "Add-Ons") { 
                     categoryData = allMenuItems["Add-Ons"];
                 }
                 renderMenuItems(categoryData);
 
-                // Set max-height dynamically to fit content
+              
                 pullOutMenuContainer.style.maxHeight = pullOutMenuContainer.scrollHeight + 'px';
                 pullOutMenuContainer.classList.add('active');
                 pullOutMenuContainer.style.opacity = '1';
                 pullOutMenuContainer.style.pointerEvents = 'auto';
 
-                // Scroll to the opened menu
                 pullOutMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 currentOpenCategory = category;
             }
 
             function closePullOutMenu() {
                 pullOutMenuContainer.classList.remove('active');
-                pullOutMenuContainer.style.maxHeight = '0'; // Collapse
+                pullOutMenuContainer.style.maxHeight = '0'; 
                 pullOutMenuContainer.style.opacity = '0';
                 pullOutMenuContainer.style.pointerEvents = 'none';
                 setTimeout(() => {
@@ -699,7 +698,6 @@
                         
                         closePullOutMenu();
                     } else {
-                        // If different category or no category open, close current and open new
                         if (currentOpenCategory) {
                             closePullOutMenu();
                            
@@ -711,10 +709,8 @@
                 });
             });
 
-            // Close button for the pull-out menu
             pullOutCloseButton.addEventListener('click', closePullOutMenu);
 
-             // Initial check to ensure pull-out menu is hidden on load
              if(pullOutMenuContainer.classList.contains('active')) {
                  pullOutMenuContainer.classList.remove('active');
                  pullOutMenuContainer.style.maxHeight = '0';
