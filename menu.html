@@ -375,7 +375,6 @@
                         <p class="mt-6 text-2xl font-semibold text-white">Combos</p>
                     </div>
 
-                    <!-- Add-Ons Category (New) -->
                     <div class="flex flex-col items-center category-card">
                         <img src="add.jpg" alt="Add-Ons" class="category-image" data-category="Add-Ons" onerror="this.onerror=null;this.src='https://placehold.co/300x300/000000/FFF8DC?text=Add-Ons';">
                         <p class="mt-6 text-2xl font-semibold text-white">Add-Ons</p>
@@ -385,15 +384,13 @@
             </div>
         </section>
 
-        <!-- Pull-Out Menu Detail Section -->
         <section id="menu-detail-section" class="py-12 px-4 bg-black">
-             <!-- This container helps with alignment and responsiveness for the dynamic content -->
             <div class="container mx-auto">
                 <div id="pullOutMenuContent" class="pull-out-menu">
                     <span class="pull-out-close-button">&times;</span>
                     <h3 id="pullOutMenuTitle" class="pull-out-menu-title"></h3>
                     <div id="pullOutMenuItems">
-                        <!-- Menu items will be rendered here by JavaScript -->
+
                     </div>
                     <div class="text-center mt-8" style="color: var(--color-bill-border-dark);">
                         <p> 5%/- Applicable on all items.</p>
@@ -405,10 +402,10 @@
 
     </main>
 
-    <!-- Footer (Adapted from index.html) -->
+  
     <footer class="site-footer">
         <div class="container">
-            <!-- Logo and tagline -->
+
             <div class="footer-section">
                 <div class="flex items-center gap-2">
                     <img src="images/logo.png" alt="Spicy Bowl Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/50x50/000000/FFFFFF?text=Logo';">
@@ -417,7 +414,6 @@
                 <p>Making exotic dishes affordable for everyone.</p>
             </div>
 
-            <!-- Quick Links -->
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
@@ -427,7 +423,7 @@
                 </ul>
             </div>
 
-            <!-- Contact & Social -->
+       
             <div class="footer-section">
                 <h4>Contact Us</h4>
                 <p class="mb-1"><i class="fa fa-map-marker"></i> &nbsp; 123 Ramen Street, Spicy City</p>
@@ -448,13 +444,12 @@
             </div>
         </div>
 
-        <!-- Bottom bar -->
         <div class="bottom-bar">
             © 2025 Spicy Bowl. All rights reserved.
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle and Pull-Out Menu -->
+ 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenuButton = document.querySelector('header button');
@@ -470,129 +465,128 @@
                 });
             });
 
-            // --- Pull-Out Menu Logic ---
-            const pullOutMenuContainer = document.getElementById('pullOutMenuContent'); // This is the main pull-out div
+            const pullOutMenuContainer = document.getElementById('pullOutMenuContent'); 
             const pullOutCloseButton = document.querySelector('.pull-out-close-button');
             const pullOutMenuTitle = document.getElementById('pullOutMenuTitle');
             const pullOutMenuItemsContainer = document.getElementById('pullOutMenuItems');
             const categoryImages = document.querySelectorAll('.category-image');
 
-            let currentOpenCategory = null; // To track which category's menu is currently displayed
+            let currentOpenCategory = null; 
 
-            // Categorized Menu Data (from previous response, refined)
+       
             const allMenuItems = {
                 "Momos": {
                     "Veg Momo's": [
-                        { name: "Tibetan Veg Momo", description: "Classic vegetable filling, perfectly seasoned.", prices: ["₹79 (Steamed)", "₹89 (Pan-Fried)", "₹89 (Pan-Fried w/ Sauce)"] },
-                        { name: "Schezwan Veg Momo", description: "Spicy and aromatic Schezwan-style vegetable momos.", price: "₹99" },
-                        { name: "Cheese Corn Momo", description: "A delightful blend of sweet corn and gooey cheese.", price: "₹109" },
-                        { name: "Mushroom Momo", description: "Earthy mushrooms encased in delicate dumpling wrappers.", price: "₹109" },
-                        { name: "Spicy Paneer Momo", description: "Soft paneer mixed with spicy herbs and spices.", price: "₹109" }
+                        { name: "Tibetan Veg Momo", description: "Classic vegetable filling, perfectly seasoned.", prices: ["$79 (Steamed)", "$89 (Pan-Fried)", "$89 (Pan-Fried w/ Sauce)"] },
+                        { name: "Schezwan Veg Momo", description: "Spicy and aromatic Schezwan-style vegetable momos.", price: "$99" },
+                        { name: "Cheese Corn Momo", description: "A delightful blend of sweet corn and gooey cheese.", price: "$109" },
+                        { name: "Mushroom Momo", description: "Earthy mushrooms encased in delicate dumpling wrappers.", price: "$109" },
+                        { name: "Spicy Paneer Momo", description: "Soft paneer mixed with spicy herbs and spices.", price: "$109" }
                     ],
                     "Non-Veg Momo's": [
-                        { name: "Tibetan Chicken Momo", description: "Classic chicken filling, tender and flavorful.", prices: ["₹109 (Steamed)", "₹119 (Pan-Fried)", "₹119 (Pan-Fried w/ Sauce)"] },
-                        { name: "Schezwan Chicken Momo", description: "Spicy chicken momos with an authentic Schezwan kick.", price: "₹119" },
-                        { name: "Peri Peri Chicken Momo", description: "Zesty and spicy chicken momos with Peri Peri flavor.", price: "₹119" },
-                        { name: "Tandoori Chicken Momo", description: "Smoky Tandoori chicken momos, a unique fusion.", price: "₹119" },
-                        { name: "Chettinad Prawn Momo", description: "Succulent prawns in a rich, aromatic Chettinad spice blend.", price: "₹139" }
+                        { name: "Tibetan Chicken Momo", description: "Classic chicken filling, tender and flavorful.", prices: ["$109 (Steamed)", "$119 (Pan-Fried)", "$119 (Pan-Fried w/ Sauce)"] },
+                        { name: "Schezwan Chicken Momo", description: "Spicy chicken momos with an authentic Schezwan kick.", price: "$119" },
+                        { name: "Peri Peri Chicken Momo", description: "Zesty and spicy chicken momos with Peri Peri flavor.", price: "$119" },
+                        { name: "Tandoori Chicken Momo", description: "Smoky Tandoori chicken momos, a unique fusion.", price: "$119" },
+                        { name: "Chettinad Prawn Momo", description: "Succulent prawns in a rich, aromatic Chettinad spice blend.", price: "$139" }
                     ],
                     "Signature Krispy Krunch (3 Pcs)": [
-                        { name: "Veg Krunchy Momo & Hot Fries", description: "Crispy veg momos paired with perfectly seasoned hot fries.", price: "₹129" },
-                        { name: "Paneer Krunchy Momo & Hot Fries", description: "Crunchy paneer momos served alongside crispy hot fries.", price: "₹139" },
-                        { name: "Chicken Krunchy Momo & Hot Fries", description: "Irresistible chicken momos with a satisfying crunch, plus hot fries.", price: "₹139" }
+                        { name: "Veg Krunchy Momo & Hot Fries", description: "Crispy veg momos paired with perfectly seasoned hot fries.", price: "$129" },
+                        { name: "Paneer Krunchy Momo & Hot Fries", description: "Crunchy paneer momos served alongside crispy hot fries.", price: "$139" },
+                        { name: "Chicken Krunchy Momo & Hot Fries", description: "Irresistible chicken momos with a satisfying crunch, plus hot fries.", price: "$139" }
                     ],
                     "Pan-Fried with Hot Chilli Sauce": [
-                        { name: "Pan Fried Veg Momo With Red Chilli Oil", description: "Golden pan-fried veg momos drizzled with fiery red chilli oil.", price: "₹129" },
-                        { name: "Pan Fried Chilli Chicken Momo With Red Chilli Oil", description: "Juicy chicken momos, pan-fried and tossed in a rich red chilli oil.", price: "₹139" }
+                        { name: "Pan Fried Veg Momo With Red Chilli Oil", description: "Golden pan-fried veg momos drizzled with fiery red chilli oil.", price: "$129" },
+                        { name: "Pan Fried Chilli Chicken Momo With Red Chilli Oil", description: "Juicy chicken momos, pan-fried and tossed in a rich red chilli oil.", price: "$139" }
                     ],
                     "Momo Platter": [
-                        { name: "Steamed Veg Momo Platter", description: "Assortment of steamed vegetable momos.", price: "₹99" },
-                        { name: "Steamed Non-Veg Momo Platter", description: "Assortment of steamed non-vegetarian momos.", price: "₹109" },
-                        { name: "Fried Veg / Non-Veg Platter", description: "Crispy fried momo platter, choice of veg or non-veg.", price: "₹129 / ₹139" }
+                        { name: "Steamed Veg Momo Platter", description: "Assortment of steamed vegetable momos.", price: "$99" },
+                        { name: "Steamed Non-Veg Momo Platter", description: "Assortment of steamed non-vegetarian momos.", price: "$109" },
+                        { name: "Fried Veg / Non-Veg Platter", description: "Crispy fried momo platter, choice of veg or non-veg.", price: "$129 / $139" }
                     ],
                      "Mowopav": [
-                        { name: "Krunchy Veg Pav With Chilli Fry", description: "Crispy veg patty in a pav, served with spicy chilli fry.", price: "₹89" },
-                        { name: "Krunchy Paneer Pav With Chilli Fry", description: "Delicious paneer patty in a pav, complemented by chilli fry.", price: "₹89" },
-                        { name: "Krunchy Chicken Pav With Chilli Fry", description: "Savory chicken patty in a pav, with a kick of chilli fry.", price: "₹99" }
+                        { name: "Krunchy Veg Pav With Chilli Fry", description: "Crispy veg patty in a pav, served with spicy chilli fry.", price: "$89" },
+                        { name: "Krunchy Paneer Pav With Chilli Fry", description: "Delicious paneer patty in a pav, complemented by chilli fry.", price: "$89" },
+                        { name: "Krunchy Chicken Pav With Chilli Fry", description: "Savory chicken patty in a pav, with a kick of chilli fry.", price: "$99" }
                     ]
                 },
                 "Noodles": {
                     "Signature Momo Saucy Noodle (Bowl)": [
-                        { name: "3 Pan Fried Veg Momo With Noodles & Hot Sauce", description: "A satisfying bowl with pan-fried veg momos, noodles, and our signature hot sauce.", price: "₹99" },
-                        { name: "3 Pan Fried Chicken Momo With Noodles & Chilli Sauce", description: "Pan-fried chicken momos served with noodles and a fiery chilli sauce.", price: "₹119" }
+                        { name: "3 Pan Fried Veg Momo With Noodles & Hot Sauce", description: "A satisfying bowl with pan-fried veg momos, noodles, and our signature hot sauce.", price: "$99" },
+                        { name: "3 Pan Fried Chicken Momo With Noodles & Chilli Sauce", description: "Pan-fried chicken momos served with noodles and a fiery chilli sauce.", price: "$119" }
                     ],
                     "Pan Asian Bowl": [
-                        { name: "Chicken Wonton Soup (CHINA)", description: "Hearty chicken wonton soup with delicate flavors.", price: "₹129" },
-                        { name: "Veg Ramen (JAPAN)", description: "Authentic Japanese ramen with a rich vegetable broth.", price: "₹169" },
-                        { name: "Chicken Ramen (JAPAN)", description: "Flavorful Japanese chicken ramen, a true classic.", price: "₹189" },
-                        { name: "Kimchi Spicy Ramyun (KOREA)", description: "Spicy Korean ramyun infused with zesty kimchi.", price: "₹199" }
+                        { name: "Chicken Wonton Soup (CHINA)", description: "Hearty chicken wonton soup with delicate flavors.", price: "$129" },
+                        { name: "Veg Ramen (JAPAN)", description: "Authentic Japanese ramen with a rich vegetable broth.", price: "$169" },
+                        { name: "Chicken Ramen (JAPAN)", description: "Flavorful Japanese chicken ramen, a true classic.", price: "$189" },
+                        { name: "Kimchi Spicy Ramyun (KOREA)", description: "Spicy Korean ramyun infused with zesty kimchi.", price: "$199" }
                     ]
                 },
-                "Desserts": { // Placeholder Desserts, as per your request to add any extra
+                "Desserts": { 
                     "Sweet Endings": [
-                        { name: "Matcha Tiramisu", description: "Layers of delicate matcha-infused sponge and creamy mascarpone.", price: "₹250" },
-                        { name: "Black Sesame Ice Cream", description: "Rich, nutty, and uniquely flavored homemade ice cream.", price: "₹180" },
-                        { name: "Mochi Ice Cream", description: "Assorted flavors of soft mochi filled with ice cream.", prices: ["₹150 (2 pcs)", "₹280 (4 pcs)"] },
-                        { name: "Dorayaki Pancake", description: "Japanese red bean pancake, a classic sweet treat.", price: "₹160" }
+                        { name: "Matcha Tiramisu", description: "Layers of delicate matcha-infused sponge and creamy mascarpone.", price: "$250" },
+                        { name: "Black Sesame Ice Cream", description: "Rich, nutty, and uniquely flavored homemade ice cream.", price: "$180" },
+                        { name: "Mochi Ice Cream", description: "Assorted flavors of soft mochi filled with ice cream.", prices: ["$150 (2 pcs)", "$280 (4 pcs)"] },
+                        { name: "Dorayaki Pancake", description: "Japanese red bean pancake, a classic sweet treat.", price: "$160" }
                     ]
                 },
                 "Drinks": {
                     "Beverages": [
-                        { name: "Mint Lemon Mojito", description: "Refreshing blend of mint, lemon, and a hint of sweetness.", price: "₹109" },
-                        { name: "Blue Sea Mojito", description: "Exotic blue mojito with a refreshing, fruity twist.", price: "₹109" },
-                        { name: "Watermelon Splash", description: "Sweet and hydrating watermelon drink, perfect for any time.", price: "₹129" },
-                        { name: "Water Bottle 500ML", description: "Bottled drinking water (500ml).", price: "₹10" },
-                        { name: "Water Bottle 1L", description: "Bottled drinking water (1 Litre).", price: "₹20" }
+                        { name: "Mint Lemon Mojito", description: "Refreshing blend of mint, lemon, and a hint of sweetness.", price: "$109" },
+                        { name: "Blue Sea Mojito", description: "Exotic blue mojito with a refreshing, fruity twist.", price: "$109" },
+                        { name: "Watermelon Splash", description: "Sweet and hydrating watermelon drink, perfect for any time.", price: "$129" },
+                        { name: "Water Bottle 500ML", description: "Bottled drinking water (500ml).", price: "$10" },
+                        { name: "Water Bottle 1L", description: "Bottled drinking water (1 Litre).", price: "$20" }
                     ]
                 },
-                "Appetizers": { // Re-categorized from raw data
+                "Appetizers": {
                     "Classic Appetizers": [
-                        { name: "French Fries Classic", description: "Crispy golden fries. Choose between Salted or Peri Peri seasoning.", price: "₹79" },
-                        { name: "Chilli Oil Potato Fries (Langya Potato)", description: "Chef's Special: Potato fries tossed in our spicy chilli oil.", price: "₹99" },
-                        { name: "Chicken Wonton With Red Chilli Sauce", description: "Chef's Special: Delicate chicken wontons served with a tangy red chilli sauce.", price: "₹119" }
+                        { name: "French Fries Classic", description: "Crispy golden fries. Choose between Salted or Peri Peri seasoning.", price: "$79" },
+                        { name: "Chilli Oil Potato Fries (Langya Potato)", description: "Chef's Special: Potato fries tossed in our spicy chilli oil.", price: "$99" },
+                        { name: "Chicken Wonton With Red Chilli Sauce", description: "Chef's Special: Delicate chicken wontons served with a tangy red chilli sauce.", price: "$119" }
                     ]
                 },
-                "Cravings": { // Re-categorized from raw data
+                "Cravings": { 
                     "Veg Cravings": [
-                        { name: "Tandoori Veg Nuggets", description: "Vegetable nuggets infused with smoky Tandoori flavors.", price: "₹99" },
-                        { name: "Chilli Garlic Potato Pops", description: "Crunchy potato pops with a zesty chilli garlic seasoning.", price: "₹109" },
-                        { name: "Cheese Corn Bites", description: "Melt-in-your-mouth bites filled with sweet corn and cheese.", price: "₹109" },
-                        { name: "Spicy Corn Nuggets", description: "Golden nuggets packed with a spicy corn kernel burst.", price: "₹109" }
+                        { name: "Tandoori Veg Nuggets", description: "Vegetable nuggets infused with smoky Tandoori flavors.", price: "$99" },
+                        { name: "Chilli Garlic Potato Pops", description: "Crunchy potato pops with a zesty chilli garlic seasoning.", price: "$109" },
+                        { name: "Cheese Corn Bites", description: "Melt-in-your-mouth bites filled with sweet corn and cheese.", price: "$109" },
+                        { name: "Spicy Corn Nuggets", description: "Golden nuggets packed with a spicy corn kernel burst.", price: "$109" }
                     ],
                     "Non-Veg Cravings": [
-                        { name: "Chicken Nuggets", description: "Classic crispy chicken nuggets, perfect for a quick bite.", price: "₹129" },
-                        { name: "Chicken Finger", description: "Tender chicken strips, breaded and fried to golden perfection.", price: "₹129" },
-                        { name: "Chicken Popcorn", description: "Bite-sized crispy chicken pieces, highly addictive.", price: "₹129" },
-                        { name: "Chicken Crispy Wings", description: "Crispy fried chicken wings, seasoned to perfection.", price: "₹139" }
+                        { name: "Chicken Nuggets", description: "Classic crispy chicken nuggets, perfect for a quick bite.", price: "$129" },
+                        { name: "Chicken Finger", description: "Tender chicken strips, breaded and fried to golden perfection.", price: "$129" },
+                        { name: "Chicken Popcorn", description: "Bite-sized crispy chicken pieces, highly addictive.", price: "$129" },
+                        { name: "Chicken Crispy Wings", description: "Crispy fried chicken wings, seasoned to perfection.", price: "$139" }
                     ],
                     "Sea Food Special": [
-                        { name: "Fish Finger", description: "Golden fried fish fingers, a classic appetizer.", price: "₹129" },
-                        { name: "Chilli Crispy Prawns", description: "Crispy prawns tossed in a tangy and spicy chilli sauce.", price: "₹129" },
-                        { name: "Crab Lollypop", description: "Delectable crab lollypops, a unique seafood delight.", price: "₹149" }
+                        { name: "Fish Finger", description: "Golden fried fish fingers, a classic appetizer.", price: "$129" },
+                        { name: "Chilli Crispy Prawns", description: "Crispy prawns tossed in a tangy and spicy chilli sauce.", price: "$129" },
+                        { name: "Crab Lollypop", description: "Delectable crab lollypops, a unique seafood delight.", price: "$149" }
                     ]
                 },
                 "Combos": {
                     "Special Combos": [
-                        { name: "Peri Peri Fries + Fried Veg Momo", description: "A spicy kick with crispy fries and delicious veg momos.", price: "₹149" },
-                        { name: "Peri Peri Fries + Fried Chicken Momo", description: "Spicy fries paired with savory fried chicken momos.", price: "₹159" },
-                        { name: "French Fry + Chicken Mowopav + Mint Mojito", description: "A complete meal: fries, chicken mowopav, and refreshing mojito.", price: "₹199" },
-                        { name: "French Fry + Veg Mowopav + Mint Mojito", description: "Crispy fries, tasty veg mowopav, and a cool mint mojito.", price: "₹209" }
+                        { name: "Peri Peri Fries + Fried Veg Momo", description: "A spicy kick with crispy fries and delicious veg momos.", price: "$149" },
+                        { name: "Peri Peri Fries + Fried Chicken Momo", description: "Spicy fries paired with savory fried chicken momos.", price: "$159" },
+                        { name: "French Fry + Chicken Mowopav + Mint Mojito", description: "A complete meal: fries, chicken mowopav, and refreshing mojito.", price: "$199" },
+                        { name: "French Fry + Veg Mowopav + Mint Mojito", description: "Crispy fries, tasty veg mowopav, and a cool mint mojito.", price: "$209" }
                     ]
                 },
                 "Add-Ons": {
                     "Extras": [
-                        { name: "Boiled Egg", price: "₹15" },
-                        { name: "Egg Fried", price: "₹25" },
-                        { name: "Cheese Slice", price: "₹20" },
-                        { name: "Cheese Shredded", price: "₹30" },
-                        { name: "Mint Mojito Add-on", price: "₹50" }
+                        { name: "Boiled Egg", price: "$15" },
+                        { name: "Egg Fried", price: "$25" },
+                        { name: "Cheese Slice", price: "$20" },
+                        { name: "Cheese Shredded", price: "$30" },
+                        { name: "Mint Mojito Add-on", price: "$50" }
                     ]
                 }
             };
 
 
             function renderMenuItems(categoryData) {
-                pullOutMenuItemsContainer.innerHTML = ''; // Clear previous items
+                pullOutMenuItemsContainer.innerHTML = ''; 
 
                 for (const subCategory in categoryData) {
                     if (categoryData.hasOwnProperty(subCategory)) {
